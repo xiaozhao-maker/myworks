@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+    .box1 { background:rgba(25, 25, 0, 0.489);
+           color: white;
+          padding: 30px 15px;          
+          position: relative; /* 或者设置为"absolute" */
+          padding-bottom: 0px;
+          padding-left: 20px;
+          font-size: 40px;
+           }/* 标题和背景 */
+    .box2{ background:rgba(25, 25, 0, 0.489);
+           color: white;
+           font-size: 20px;
+           text-align:left;
+           padding: 20px}/* 末尾和背景 */
+    
+    .interactive-button {
+        background-color: rgb(1, 1, 1);
+         color: white;
+         padding: 10px 20px;
+        transition: background-color 0.3s ease-in-out; }
+       .interactive-button:hover { background-color: red;}
+       .good1{background-color: rgb(1, 1, 1);
+              padding: 0px 0px;
+              }/* 黑变红二级标题 */
+
+    .blue-button {
+        font-size: 15px;
+        width: 90px;
+        height: 40px;
+        background-color: rgba(18, 170, 252, 0.645);
+        color:white;
+        margin: 1px 2px 5px 20px ;/* 设置按钮位置 */
+        text-align: center;/* 字体居中 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }/* 蓝色按钮 */
+    
+   
+    .box3{ position:absolute; top: 190px; left: 200px;
+       }/* 蓝按钮右侧黑色的字 */
+    </style>
+</head>
+<body>
+<h1 class="box1">Chaina</h1>
+<p button class="good1">
+    <button class="interactive-button">Home</button>
+    <button class="interactive-button">News</button>
+    <button class="interactive-button">Contact</button>
+    <button class="interactive-button"> About</button>
+</p>
+
+<div class="button-container box" >
+    <h2 class="blue-button">The Flight</h2>
+    <h2 class="blue-button">The City</h2>
+    <h2 class="blue-button">The island</h2>
+    <h2 class="blue-button">The Food</h2>
+</div>
+ 
+<div class="box3" >
+<h1>The City</h1>
+<p>Chania is the capital of the Chania region on the<br>
+ island of Crete</p>
+</div>
+
+
+
+
+
+<div class="box2" >Footer Text</div>
+
+    
+</body>
+</html>
