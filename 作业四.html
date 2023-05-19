@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>使用背景图片的网页</title>
+    <style>
+       body{
+		  background-color: antiquewhite;
+      background-image:url("../网页设计作业/1.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed; }
+      /* 设置body的 */
+      
+     
+ /* 设置按钮的一堆东西*/
+.button-group {position: relative;top: 0px;left: 100px;
+  
+
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding-right: 25px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+
+  background-color: #f1f1f1;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+      
+ /* 设置搜索框 */
+
+      .search-box {
+			   width: 300px;
+			   height: 30px;
+			   border: none;
+			   border-radius: 15px;
+			   background-color: #f2f2f2;
+			   padding: 5px 10px;
+			   transition: width 0.3s ease-in-out;
+        }
+		.search-box:focus { width: 500px;}
+   
+
+    .search-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Search的那个框框 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+ 
+}
+
+.box {
+  background-color: white;
+  border: 1px solid black;
+  padding: 0px 10px;
+  text-align: center;
+ 
+}
+   </style>
+  </head>
+  
+  <body>
+      
+<div>
+    <img src="作业四要的图片.png" style="position:relative;width:50px;height: 20px;top: 25px;">
+      <div class="button-group">
+        <button class="transparent-button">按钮1</button>
+        <button class="transparent-button">按钮2</button>
+        <div class="dropdown">
+          <button class="transparent-button dropbtn">按钮3 ▼</button>
+          <div class="dropdown-content">
+            <a href="#">选项1</a>
+            <a href="#">选项2</a>
+            <a href="#">选项3</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+      
+      
+      <form class="search-form" style="top: 100px;">
+        <input type="text" placeholder="Search" class="search-box">
+      </form>
+  
+
+      <div class="container">
+        <div class="box">
+          Search
+        </div>
+      </div>
+
+      
+  
+</body>
+</html>
+
