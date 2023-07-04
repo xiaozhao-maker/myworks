@@ -1,0 +1,162 @@
+h1{ 
+  text-align:left;
+  font-size: 32px; /* h1字体大小 */
+  font-weight: bold;
+}
+h2{
+  text-align:left;
+  font-size: 20px;
+
+  display: inline-block;
+  border-bottom: 4px solid rgb(8, 155, 111);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  }
+h3{color: rgb(8, 155, 111);}
+p{
+  color:rgba(0, 0, 0, 0.71);
+  font-size: 10px;
+  text-align:left;
+  text-decoration: underline  rgba(8, 155, 111, 0.697);
+}
+
+
+/*设置叫“more”的按钮们*/
+.button {
+  color: rgb(8, 155, 111);
+  font-size: 15px;
+  text-decoration: none; /* 去除下划线 */
+}
+ul {
+  list-style: none;/*去掉ul产生的小圆点*/
+  border: 2px solid rgba(1, 38, 27, 0.764);
+  border-radius: 5px;
+  display: inline-block;/*使边框长度适应*/
+   padding: 3px 9px;
+
+}
+
+
+
+
+/*设置他们并列*/
+.features{
+  display: flex;/*display: flex;将section元素的子元素排列在一行，并自动换行。*/ 
+  flex-wrap: wrap;/**/ 
+  justify-content: space-between;/*space-between;设置了元素之间的空白间距，可以达到并列对齐的效果。*/ 
+}
+article {
+  width: calc(50% - 10px);/*每个article元素的宽度设置为50%减去一些边距，以便并排放置。*/ 
+  margin-bottom: 20px;/*margin-bottom属性用设置article元素之间的垂直间距。*/ 
+
+}
+
+
+
+.posts {
+    display: flex;/*display: flex;将section元素的子元素排列在一行，并自动换行。*/ 
+    flex-wrap: wrap;/**/ 
+    justify-content: space-between;/*space-between;设置了元素之间的空白间距，可以达到并列对齐的效果。*/ 
+ }
+  article {
+    width: calc(50% - 10px);/*每个article元素的宽度设置为50%减去一些边距，以便并排放置。*/ 
+    margin-bottom: 20px;/*margin-bottom属性用设置article元素之间的垂直间距。*/ 
+ }
+  
+
+
+ /**/ 
+
+
+
+
+/*在左侧插入图标*/
+.features article {
+  display: flex;
+}
+.features article:before {
+  content: "";
+  width: 100px; /* 图片宽度 */
+  height: 100px; /* 图片高度 */
+  background-image: url(1.jpg);
+  background-size: cover; /*尺寸 */
+  background-position: center; /* 图片呈现位置 */
+  margin-right: 15px; /* 图片和内容之间的间距 */
+}
+/*使用CSS的伪元素选择器和flexbox布局来实现在每个article元素的左侧插入图片。
+首先，您需要为每个article元素的外部容器添加一个类名，比如"features"。
+然后，通过CSS来定义图片样式并将其插入到每个article的左侧。*/
+#search {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 30px;
+}
+#query {
+  width: 400px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  background-color:  rgba(13, 197, 142, 0.522);
+  padding: 5px 10px;
+  transition: width 0.3s ease-in-out;/*transition属性指定了width属性的过渡效果，缓动函数为ease。*/ 
+}
+#query:hover {
+  width: 600px; /* 鼠标在搜索框上方时的宽度 */
+}
+
+
+ /*链接的一系列颜色设置 */
+a:link,
+a:visited {
+  color:  rgb(8, 155, 111); /* 点击前和点击后的颜色 */
+  text-decoration: none; /* 去除下划线 */
+}
+a:hover {
+  color: rgba(13, 197, 142, 0.522); /* 鼠标悬停时的颜色 */
+}
+a:active {
+  color:  rgb(8, 155, 111); /* 点击时的颜色 */
+}
+/* :link用于设置未访问链接（点击前），:visited设置已访问链接（点击后），:hover设置鼠标悬停状态下，:active设置点击时。 */
+
+ /* 同一个容器中的多个相同元素：.parent-container ul:nth-child(3) {...}   */
+
+
+/*两个id之间插入分割线*/
+#banner::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(8, 155, 111);
+}
+/*使用 CSS 的伪类选择器 ::after 或 ::before 来实现。这样，在两个元素之间会添加一个空的伪元素，并应用相应的样式来创建分割线效果。*/
+/*用 ::after 伪元素和 ::before 伪元素来创建两个元素之间的分割线。将 content 设置为空，并使用 display: block 将其转换为块级元素。设置 height 为 1px 来定义分割线的高度，并设置 width 为 100%，以使分割线填充整个元素的宽度。 background-color 为想要的分割线的颜色。*/
+
+.icons li {display: inline-block;}
+/*使icons内li的并列,开头切割线上那几个*/
+.icons{
+  font-size: 6px;
+  text-align:right;
+  position: relative;/* 相对原始位置偏移  */
+  top: 8px; 
+  left: 700px;
+
+}
+
+
+
+
+
+/*底栏*/
+    #footer {
+        background-color:  rgba(8, 155, 111, 0.136);
+        color: #00000000;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+
+

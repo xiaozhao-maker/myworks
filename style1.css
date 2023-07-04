@@ -1,0 +1,106 @@
+a:link,
+a:visited {
+  color: rgba(187, 70, 31, 0.395); /* 点击前和点击后的颜色 */
+  text-decoration: none; /* 去除下划线 */
+}
+a:hover {
+  color:rgba(161, 5, 5, 0.965); /* 鼠标悬停时的颜色 */
+}
+a:active {
+  color: rgba(187, 70, 31, 0.364); /* 点击时的颜色 */
+}
+/* :link用于设置未访问链接（点击前），:visited设置已访问链接（点击后），:hover设置鼠标悬停状态下，:active设置点击时。 */
+
+body {
+  text-align: left; /* 文字靠左 */
+}
+
+h1 {
+  font-size: 32px; /* h1字体大小 */
+  color: rgba(161, 5, 5, 0.965); /* 文字颜色为深红色 */
+  text-decoration: underline;
+}
+
+h3 {
+   font-size: 18px; /* h3字体大小 */
+   display: inline-block;
+   border-color: rgba(161, 5, 5, 0.965);
+   border-style: solid;
+   border-width: 2px;
+   border-radius: 20px;
+   padding: 3px 9px;
+   margin-top: 40px; /* 图片下方的间距 */
+}
+
+p{color:rgb(112, 1, 1) ;
+}
+
+img{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;/* 图片居中 */
+}
+
+
+.major {
+  background-color: rgba(166, 39, 39, 0.965);
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 10px;
+}
+/* 1.设置div，class=major
+ 2. 使用 display: inline-block 属性,使背景包裹文字的长度和宽度。*/
+
+
+ .posts article + article:before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: transparent;
+  border-top: 1px dashed rgba(166, 39, 39, 0.484);
+  margin: 20px 0;
+} /* 在每两个<article>之间插入一个带有虚线分割线效果的块元素，即在每个<article>后面添加一个空白行，设其上边框为1像素虚线*/  
+
+ 
+
+
+
+/*设计侧边栏*/
+
+#menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px; /* 调节宽度 */
+  background-color: rgba(166, 39, 39, 0.094); /* 调节背景颜色 */
+  z-index: 999; /* 设置层级，确保不会被内容遮挡 */
+  
+}
+body {
+  margin-left: 200px; /* 让内容在侧边栏后开始显示 */
+}
+
+
+/*搜索框样式*/
+#search {
+  position: absolute;
+  top: 50px; 
+  left: 780px;
+
+  width: 200px; /* 可调节宽度 */
+  height: 80px; /* 可调节高度 */
+  padding: 50px;
+  background-color: rgba(166, 39, 39, 0.262); /* 可调节背景颜色 */
+  border: none;
+  margin-bottom: 10px; /* 拉开和周边其他元素的距离 */
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;/*水平和垂直居中*/
+
+}
+
+
+
