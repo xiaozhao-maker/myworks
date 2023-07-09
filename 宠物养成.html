@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+<style>/*css*/
+    #pet-image {
+     position: absolute; 
+    width: 300px; /* 设置图像宽度为 300 像素 */
+    height: auto; /* 根据宽度自动调整高度，保持图像原有的纵横比 */
+    position: absolute;
+    top: 900px;
+    left: 50%;
+    z-index: 999;
+    transform: translateX(-50%);
+    }
+    #pet {
+        background-image: url('客厅背景.jpg');
+        background-size: cover;
+        height: 200vh;
+        width: 100%;
+        z-index: -1;
+        /* 其他样式 */
+      }
+   
+#饭盆 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 950px;
+  left: 50px;
+}
+#水盆{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 1150px;
+  left: 40px;
+}
+#dmb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 1150px;
+  right: 50px;
+  transform-origin: center center; /* 设置旋转的中心点为图片中心 */
+  transform: translate(-50%, -50%) rotate(45deg); /* 旋转45度 */
+
+}
+#猫砂盆 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 970px;
+  right: 1px;
+}
+
+</style>
+
+
+<style>/*计分板和按钮*/
+  /* 设置按钮样式为透明 */
+  .transparent-button {
+    background: none;
+    border: none;
+  }
+    /* 设置按钮位置 */
+  #button1{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 950px;
+      left: 50px;
+  }
+  #button2{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 1150px;
+      left: 40px;
+  }
+  #button3{
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 970px;
+      right: 1px;
+  }
+
+  #score {
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      margin-top: 20px;
+      max-width: 100px;
+      padding: 15px;
+     background-color: #ff7ec75f; /* 背景颜色可调节 */
+     border: 2px dotted rgb(248, 245, 245); /* 边框可调节 */
+     border-radius: 25px; /* 添加圆角 */
+     border-width: 3px; /* 调整边框线宽-点的疏密？ */
+     }
+</style>
+
+
+
+</head>
+<body >
+ 
+    <h2 style="
+    font-weight: bold; 
+    color: #ed77baed; 
+    font-size: 40px; 
+    position: relative;
+    top: 200px; 
+    text-align: center;
+    ">饲养宠物猫</h2>
+    <p style="
+    font-weight: bold;
+    color:#ff7ec7;
+    font-size: 20px; 
+    position: relative;
+    top: 200px;
+    text-align: center;
+    ">你是一个新手铲屎官，刚刚从宠物店带回一只小猫，<br>点击地板上的物品和小猫互动，获取它的信任吧！ </p>
+ 
+    
+    <div id="pet" id="container"><!--图片--> 
+        <img id="pet-image" src="pet.gif">
+        <img id="饭盆" src="饭盆.png">
+        <img id="水盆" src="水盆.webp">
+        <img id="dmb" class="dmb" onclick="alert('4444')" src="逗猫棒.png">
+        <img id="猫砂盆" src="猫砂盆.png">
+      <div id="dialog-box"></div>
+    </div>  
+
+    <script>//逗猫棒和猫猫的互动
+      var mao = document.getElementById('pet-image');
+      var dmb = document.getElementById('dmb');
+      var i = true
+      mao.onclick = function() {
+        mao.src = "pet2.gif";
+        alert('猫猫看到你靠近，开心的跑了过来')
+      }
+      dmb.onclick = function() {
+        mao.src = "pet3.gif"
+        alert('使用逗猫棒与猫猫互动')
+      }
+    </script>
+
+    
+<div id="score">好感度: 0</div>
+<button id="button1" class="transparent-button" ></button>
+<button id="button2" class="transparent-button" ></button>
+<button id="button3" class="transparent-button" ></button>
+<script>//计数板和按钮
+  // 获取分数显示元素和按钮元素
+var scoreElement = document.getElementById("score");
+var buttons = document.querySelectorAll(".transparent-button");
+
+// 定义初始分数和达到的目标分数
+var score = 0;
+var targetScore = 10;
+
+// 点击事件处理函数
+function increaseScore() {
+// 增加分数
+score++;
+
+// 更新分数显示
+scoreElement.textContent = "好感度: " + score;
+
+// 检查是否达到目标分数
+if (score === targetScore) {
+  // 显示游戏成功提示
+  alert("成功获得猫猫信任！获得成就：《最佳铲屎官》");
+
+  // 重置分数为0
+  score = 0;
+
+  // 更新分数显示
+  scoreElement.textContent = "好感度: " + score;
+}
+}
+
+// 绑定点击事件处理函数到按钮
+for (var i = 0; i < buttons.length; i++) {
+buttons[i].addEventListener("click", increaseScore);
+}
+</script>
+
+  
+
+ 
+
+</body>
+</html>
